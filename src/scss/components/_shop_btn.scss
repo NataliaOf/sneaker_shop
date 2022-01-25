@@ -1,0 +1,47 @@
+.shob {
+   margin-bottom: 35px;
+   // background-color: #ccc;
+text-align: center;
+   &__title {
+      @include h2;
+      // margin-bottom: 55px;
+      margin-bottom: clamp(30px, 5vw, 55px);
+   }
+
+   &__text {
+      margin: 0 auto;
+      margin-bottom: 30px;
+      width: 660px;
+     @media (max-width:740px) {
+        width: 80%;
+     }
+   }
+
+   &__box {
+      display: flex;
+      justify-content: center;
+      @media (max-width:420px){
+         display: block;
+      }
+   }
+
+   &__btn {
+      display: block;
+      width: 180px;
+      margin-bottom: clamp(30px, 5vw, 120px);
+      @include btnDark;
+      &:first-child{
+       margin-right: 25px;
+       @media (max-width:420px){
+         margin: 0 auto;
+         
+       }
+      }
+      @media (max-width:420px) {
+        
+         margin: 20px auto;
+         width: 80%;
+      }
+   }
+}
+

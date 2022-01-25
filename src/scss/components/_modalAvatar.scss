@@ -1,0 +1,180 @@
+.modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   padding-top: 100px; /* Location of the box */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+   position: relative;
+   background-color:$colorLight;
+   margin: auto;
+   padding: 20px;
+   border: 2px solid $colorDark;
+   width: 50%;
+   top: 50%;
+   transform: translateY(-50%);
+   // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+   -webkit-animation-name: animatetop;
+   -webkit-animation-duration: 0.4s;
+   animation-name: animatetop;
+   animation-duration: 0.4s;
+   @media (max-width:670px) {
+      width: 95%;
+   }
+}
+
+/* Add Animation */
+// @-webkit-keyframes animatetop {
+//    from {top:-300px; opacity:0} 
+//    to {top:0; opacity:1}
+// }
+
+@keyframes animatetop {
+   from {top:-300px; opacity:0}
+   to {top:50%; opacity:1}
+}
+
+/* The Close Button */
+.close {
+   color: $colorDark;
+   float: right;
+   font-size: 35px;
+   font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+   color: #000;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.modal-header {
+   padding: 10px 16px;
+   background-color: #ccc;
+   color: $colorDark;
+   text-transform: uppercase;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+   padding: 10px 16px;
+   height: auto;
+   background-color: #ccc;
+   color: $colorDark;
+  text-transform: uppercase;
+}
+
+
+.modal-register {
+   height: 20vh;
+   width: 80%;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   &.close{
+      display: none;
+   }
+   
+
+   &__nickname {
+      width: 100%;
+      padding: 10px 25px;
+      border:none;
+      border-bottom: 2px solid $colorDark;
+   }
+
+   &__password {
+      width: 100%;
+      padding: 10px 25px;
+      border:none;
+      border-bottom: 2px solid $colorDark;
+   }
+
+   &__btn {
+      width: 100%;
+      @include btnDark;
+      margin-bottom: 30px;
+   }
+   &__name {
+      width: 100%;
+      padding: 10px 25px;
+      border:none;
+      border-bottom: 2px solid $colorDark;
+   }
+
+   &__email {
+      width: 100%;
+      padding: 10px 25px;
+      border:none;
+      border-bottom: 2px solid $colorDark;
+   }
+   &__passrepeed {
+      width: 100%;
+      padding: 10px 25px;
+      border:none;
+      border-bottom: 2px solid $colorDark;
+      margin-bottom: 30px;
+   }
+
+   &__btn2 {
+      width: 100%;
+      @include btnDark;
+      margin-bottom: 30px;
+   }
+
+}
+
+input{
+   background-color: transparent;
+}
+
+.modal-registe2 {
+   width: 80%;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+  
+   display: none;
+   &.open{
+      display: block;
+   }
+}
+
+.error {
+
+		&__name {
+		}
+
+		&__email {
+		}
+
+		&__nik {
+		}
+
+		&__pass {
+		}
+
+		&__pass2 {
+		}
+}
+
+.open-reg{
+   cursor: pointer;
+}
+
+.open-log{
+   cursor: pointer;
+} 

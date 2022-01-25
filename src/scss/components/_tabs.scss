@@ -1,0 +1,160 @@
+
+.favorits {
+   margin-bottom: clamp(30px, 5vw, 120px);
+
+		&__title {
+         @include h2;
+         margin-bottom: 10px;
+         text-align: center;
+		}
+
+		&__tab {
+         // margin-bottom: 12px;
+		}
+}
+hr{
+   height: 2px;
+   background-color:  #D3D4D5;
+   // margin-top: -2px;
+}
+
+
+.tab {
+   overflow: hidden;
+   display: flex;
+   justify-content: space-around;
+   // border: 1px solid #ccc;
+   // background-color: #f1f1f1;
+   @media (max-width:420px){
+display: block;
+   }
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+   font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 24px;
+
+text-align: center;
+letter-spacing: 2px;
+text-transform: uppercase;
+
+   background-color: inherit;
+   // float: left;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 14px 16px;
+   transition: 0.3s;
+   @media (max-width:420px){
+      width: 100%;
+   }
+}
+
+.tab button:hover {
+   border-bottom: 2px solid $colorDark;
+}
+
+.tab button.active {
+   border-bottom: 2px solid $colorDark;
+}
+
+.tabcontent {
+   display: none;
+   padding: 34px 0px;
+   // border: 1px solid #ccc;
+   // border-top: none;
+   // &:first-child{
+   //    display: block;
+   // }
+}
+
+.favorit {
+
+   &__box {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      @media (max-width:1250px) {
+         display: block;
+      }
+   }
+
+   &__item {
+      position: relative;
+   }
+
+   &__foto {
+     
+      @media (max-width:1250px){
+         width: 50%;
+         margin: 0 auto;
+      }
+      @media (max-width:600px){
+         width: 100%;
+      }
+      & img{
+         width: 100%;
+      }
+   }
+
+   &__btn {
+      position: absolute;
+      width: 75%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      & .header__btn{
+         width: 100%;
+      }
+      @media (max-width:1250px){
+         width: 25%;
+      }
+      @media (max-width:600px){
+         width: 50%;
+      }
+   }
+}
+
+
+.runner {
+   display: flex;
+   justify-content: space-between;
+   @media (max-width:660px){
+      display: block;
+   }
+
+   &__box {
+      margin-bottom: 20px;
+   }
+
+   &__title {
+      @include h3;
+   }
+
+   &__info {
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+   }
+
+   &__text {
+   }
+}
+.ranner {
+
+   &__img {
+      // border:2px solid red;
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+   }
+}
+ .view{
+    display: block;
+ }
+ 
+// .tabcontent {
+// }

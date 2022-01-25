@@ -1,0 +1,266 @@
+.header {
+height: 100vh;
+margin-bottom: clamp(30px, 5vw, 120px);
+position: relative;
+   padding-top: 80px;
+   background: url('../../assets/img/header.jpg') no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-position: bottom;
+   @media (max-width: 1025px){
+      height: 80vw;
+      padding-top: 0;
+      margin-top: 100px;
+   }
+   @media (max-width: 290px){
+height: 100vw;
+   }
+}
+.box__nav {
+
+   position: relative;
+}
+.nav {
+background: $colorLight;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 2;
+   height: 80px;
+   padding: 24px 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   @media (max-width: 1025px) {
+      display: block;
+   }
+
+		&__btn {
+        position: relative;
+         display: flex;
+         @media (max-width: 1025px) {
+            position: absolute;
+            // top: -40px;
+            right: 20px;
+            z-index: 10;
+         }
+		}
+      &__img{
+         width: 34px;
+         height: 34px;
+         cursor: pointer;
+         &:not(:last-child){
+            margin-right: 34px;
+         }
+       
+      }
+}
+.order__index{
+   display: none;
+   text-align: center;
+   color:$colorLight;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   line-height: 18px;
+   top: 14px;
+   right: 25px;
+   border-radius: 50%;
+   background-color: red;
+}
+
+
+.menu {
+
+   display: flex;
+   justify-content: space-between;
+   flex-basis: 270px;
+   
+   
+   @media (max-width: 1025px) {
+      display: block;
+      background-color: $colorLight;
+      transition: all .7s;
+      width: 100vw;
+      height: 100vh;
+      padding-top: 70px;
+      margin-left: -2000px;
+      &.active{
+         margin-left: -20px;
+      }
+      
+   }
+
+		&__list {
+         text-transform: uppercase;
+        
+         @media (max-width: 1025px){
+            font-size: 30px;
+            line-height: 60px;
+         }
+         
+		}
+      &__list_mb{
+         display: none;
+         @media (max-width: 1025px){
+            display: block;
+            font-size: 30px;
+            line-height: 60px;
+            text-transform: uppercase;
+         }
+      }
+      &__link{
+         transition: all 1s;
+         &:hover{
+               color:gray;
+               text-decoration: underline;
+      
+         }
+         // &.active{
+         //    color:gray;
+         //    text-decoration: underline;
+         // }
+      }
+
+	
+}
+.logo {
+   width: 120px;
+   height: 38px;
+   margin: 0 10px ;
+   cursor: pointer;
+   @media (max-width: 1025px){
+      position: absolute;
+      top: 10px;
+   }
+   @media (max-width: 440px){
+      display: none;
+   }
+  
+   & svg{
+      width: 100%;
+      height: 100%;
+   }
+}
+.user {
+  
+   display: flex;
+   justify-content: space-between;
+   flex-basis: 215px;
+   @media (max-width: 1025px) {
+      display: none;
+   }
+
+		&__list {
+         margin-right: 34px;
+         text-transform: uppercase;
+         // transition: .7s;
+        
+		}
+      &__link{
+         transition: all 1s;
+         &:hover{
+            color:gray;
+            text-decoration: underline;
+         }
+   }
+
+		
+}
+.box__user{
+   display: flex;
+   align-items: center;
+   position: relative;
+   @media (max-width: 1025px){
+      position: absolute;
+      top: 40px;
+      right: 10px;
+   }
+  
+
+}
+
+.header {
+   &__info{
+      position: absolute;
+      bottom: 60px;
+      left: 60px;
+      @media (max-width: 1025px){
+         bottom: 10px;
+         left: 10px;
+      }
+      @media (max-width: 450px){
+         width: 100%;
+         left: 0;
+         padding: 10px;
+      }
+   }
+
+   &__title {
+      color:$colorLight;
+      // font-size: 48px;
+      font-size: clamp(28px, 5vw, 48px);
+      //  line-height: 63px;
+      line-height: clamp(33px, 5vw, 63px);
+       margin-bottom: 11px;
+   }
+
+
+   &__text {
+      color:$colorLight;
+      margin-bottom: 24px;
+   }
+   &__btnbox{
+      width: 385px;
+      display: flex;
+      justify-content:space-between ;
+      @media (max-width: 450px){
+        display: block;
+        width: 100%;
+      }
+   }
+
+   &__btn {
+      display: block;
+      width: 180px;
+     margin-bottom: 10px;
+      @include btnLight;
+      @media (max-width: 450px){
+         width: 100%;
+       }
+   }
+}
+
+.burger{
+   display: none;
+   height: 3px;
+   width: 30px;
+   background-color: $colorDark;
+   position: relative;
+   top: 10px;
+   
+   &::before{
+      content: "";
+      display: block;
+      height: 3px;
+   width: 30px;
+   background-color: $colorDark;
+   position: absolute;
+   top: -7px;
+   }
+   &::after{
+      content: "";
+      display: block;
+      height: 3px;
+   width: 30px;
+   background-color: $colorDark;
+   position: absolute;
+   top: 7px;
+   }
+   @media (max-width: 1025px){
+      display: block;
+   }
+   &__btn{
+      cursor: pointer;
+   }
+}

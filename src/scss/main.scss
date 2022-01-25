@@ -1,0 +1,39 @@
+// базовые подключения
+@import "vars.scss";
+@import "mixins.scss";
+@import "fonts.scss";
+@import "settings.scss";
+// html,
+// body{
+//    height: 100%;
+// }
+
+
+
+// h1{
+//    // font-family: 'Quicksand', sans-serif;
+//    font-size: 70px;
+// }
+
+
+
+
+// подключения компонентов страницы
+@import "./components/header.scss";
+// @import "./components/min-header.scss";
+@import "./components/tabs.scss";
+@import "./components/home.scss";
+@import "./components/shop_btn.scss";
+@import "./components/slider.scss";
+@import "./components/arrives.scss";
+@import "./components/stories.scss";
+@import "./components/form.scss";
+@import "./components/footer.scss";
+// @import "./components/modalAvatar.scss";
+// @import "./components/modalQuest.scss";
+// @import "./components/modalBasket.scss";
+
+// @import "./components/shop.scss";
+// @import "./components/card-product.scss";
+
+
