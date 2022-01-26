@@ -9,11 +9,17 @@ import SliderShop from './components/slaiderShop/SloiderShop';
 import Arives from './components/arives/Arives';
 import NewsBuisnes from './components/news/NeusBusnes';
 import Quest from './components/quest/Quest';
+import Modal from './components/modal/Modal';
+import ModalQuestion from './components/modal/ModalQuestion';
+import ModalBasket from './components/modal/ModalBasket';
 // import './App.css';
 
 function App() {
   return (
     <>
+    <Modal/>
+    <ModalQuestion/>
+    <ModalBasket/>
        <div className="wrapper">
   <Header/>
  <Favorite/>

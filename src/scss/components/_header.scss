@@ -38,6 +38,9 @@ background: $colorLight;
 		&__btn {
         position: relative;
          display: flex;
+         font-size: 25px;
+         cursor: pointer;
+         margin-right: 10px;
          @media (max-width: 1025px) {
             position: absolute;
             // top: -40px;

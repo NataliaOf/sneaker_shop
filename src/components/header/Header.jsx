@@ -2,8 +2,10 @@ import React from "react";
 import logo from '../../assets/img/svg/logo.svg';
 import avatar from '../../assets/img/svg/avatar.svg';
 import question from '../../assets/img/svg/question.svg';
-import basket from '../../assets/img/svg/basket.svg'
-
+import basket from '../../assets/img/svg/basket.svg'       
+import { FiUser } from "react-icons/fi";
+import { FiShoppingCart } from "react-icons/fi";
+import { BsQuestionCircle } from "react-icons/bs";
 export default function Header(){
 
    return (
@@ -49,11 +51,10 @@ export default function Header(){
           </li>
         </ul>
         <div className="nav__btn">
-         <img src={avatar} alt="logo"/>
-        
-          <img src={question} alt="logo"/>
-        
-          <img src={ basket} alt="logo"/>
+        <FiUser/>
+        <BsQuestionCircle/>
+        <FiShoppingCart/>
+   
         
           <span className="order__index"></span>
           <div className="burger__btn">
