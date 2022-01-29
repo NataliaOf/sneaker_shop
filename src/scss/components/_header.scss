@@ -77,7 +77,7 @@ background: $colorLight;
 
    display: flex;
    justify-content: space-between;
-   flex-basis: 270px;
+   // flex-basis: 270px;
    
    
    @media (max-width: 1025px) {
@@ -96,6 +96,7 @@ background: $colorLight;
 
 		&__list {
          text-transform: uppercase;
+         margin-right: 10px;
         
          @media (max-width: 1025px){
             font-size: 30px;
@@ -103,15 +104,15 @@ background: $colorLight;
          }
          
 		}
-      &__list_mb{
-         display: none;
-         @media (max-width: 1025px){
-            display: block;
-            font-size: 30px;
-            line-height: 60px;
-            text-transform: uppercase;
-         }
-      }
+      // &__list_mb{
+      //    display: none;
+      //    @media (max-width: 1025px){
+      //       display: block;
+      //       font-size: 30px;
+      //       line-height: 60px;
+      //       text-transform: uppercase;
+      //    }
+      // }
       &__link{
          transition: all 1s;
          &:hover{
@@ -119,10 +120,10 @@ background: $colorLight;
                text-decoration: underline;
       
          }
-         // &.active{
-         //    color:gray;
-         //    text-decoration: underline;
-         // }
+         &.active{
+            color:gray;
+            text-decoration: underline;
+         }
       }
 
 	
@@ -149,17 +150,17 @@ background: $colorLight;
   
    display: flex;
    justify-content: space-between;
-   flex-basis: 215px;
+   // flex-basis: 215px;
    @media (max-width: 1025px) {
       display: none;
    }
 
-		&__list {
-         margin-right: 34px;
-         text-transform: uppercase;
-         // transition: .7s;
+		// &__list {
+      //    margin-right: 34px;
+      //    text-transform: uppercase;
+      //    // transition: .7s;
         
-		}
+		// }
       &__link{
          transition: all 1s;
          &:hover{

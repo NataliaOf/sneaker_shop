@@ -6,9 +6,28 @@ import favorit3  from "../../assets/img/favorit3.jpg"
 import runner1  from "../../assets/img/runner1.png"
 import runner2  from "../../assets/img/runner2.png"
 import runner3  from "../../assets/img/runner3.png"
-
+import FavoritItem from "./FavoritsInem";
+import { useDispatch, useSelector } from 'react-redux';
+import { setEveryday, setRunning, setTravel } from "../../redux/actions/favorit";
 
 export default function Favorite () {
+   const dispatch = useDispatch();
+
+   const state = useSelector(state => state.favorit);
+
+  
+
+   function viewEveryday(){
+      dispatch(setEveryday("everyday"))
+   };
+
+   function viewRunning(){
+      dispatch(setRunning('running'))
+   };
+
+   function viewTravel(){
+      dispatch(setTravel('travel'))
+   }
 
    return (
 
@@ -17,107 +36,20 @@ export default function Favorite () {
          <h2 className="favorits__title">Our Favorites</h2>
          <div className="favorits__tab">
             <div className="tab">
-               <button className="tablinks" onclick="openCity(event, 'Everyday')">Everyday</button>
-               <button className="tablinks" onclick="openCity(event, 'Running')">Running</button>
-               <button className="tablinks" onclick="openCity(event, 'Travel')">Travel</button>
-             </div>
+               <button onClick={viewEveryday} className="tablinks" onclick="openCity(event, 'Everyday')">Everyday</button>
+               <button onClick={viewRunning} className="tablinks" onclick="openCity(event, 'Running')">Running</button>
+               <button onClick={viewTravel} className="tablinks" onclick="openCity(event, 'Travel')">Travel</button>
+          </div>
              <hr/>
-             <div id="Everyday" className="tabcontent view">
-              <div className="favorit__box">
-                 <div className="favorit__item">
-                    <div className="favorit__foto">
-                       <img src={favorit1} alt="favorit"/>
-                    </div>
-                    <div className="favorit__btn">
-                     <a href="#" className="header__btn">Shop men</a>
-                     <a href="#" className="header__btn">Shop women</a>
-                    </div>
-                 </div>
-                 <div className="favorit__item">
-                  <div className="favorit__foto">
-                     <img src={favorit1} alt="favorit"/>
-                  </div>
-                  <div className="favorit__btn">
-                   <a href="#" className="header__btn">Shop men</a>
-                   <a href="#" className="header__btn">Shop women</a>
-                  </div>
-               </div>
-               <div className="favorit__item">
-                  <div className="favorit__foto">
-                     <img src={favorit1} alt="favorit"/>
-                  </div>
-                  <div className="favorit__btn">
-                   <a href="#" className="header__btn">Shop men</a>
-                   <a href="#" className="header__btn">Shop women</a>
-                  </div>
-               </div>
-              </div>
-             </div>
-             
-             <div id="Running" className="tabcontent">
-               <div className="favorit__box">
-                  <div className="favorit__item">
-                     <div className="favorit__foto">
-                        <img src={favorit2} alt="favorit"/>
-                     </div>
-                     <div className="favorit__btn">
-                      <a href="#" className="header__btn">Shop men</a>
-                      <a href="#" className="header__btn">Shop women</a>
-                     </div>
-                  </div>
-                  <div className="favorit__item">
-                   <div className="favorit__foto">
-                      <img src={favorit2} alt="favorit"/>
-                   </div>
-                   <div className="favorit__btn">
-                    <a href="#" className="header__btn">Shop men</a>
-                    <a href="#" className="header__btn">Shop women</a>
-                   </div>
-                </div>
-                <div className="favorit__item">
-                   <div className="favorit__foto">
-                      <img src={favorit2} alt="favorit"/>
-                   </div>
-                   <div className="favorit__btn">
-                    <a href="#" className="header__btn">Shop men</a>
-                    <a href="#" className="header__btn">Shop women</a>
-                   </div>
-                </div>
-               
-               </div>
-             </div>
-             
-             <div id="Travel" className="tabcontent">
-               <div className="favorit__box">
-                  <div className="favorit__item">
-                     <div className="favorit__foto">
-                        <img src={favorit3} alt="favorit"/>
-                     </div>
-                     <div className="favorit__btn">
-                      <a href="#" className="header__btn">Shop men</a>
-                      <a href="#" className="header__btn">Shop women</a>
-                     </div>
-                  </div>
-                  <div className="favorit__item">
-                   <div className="favorit__foto">
-                      <img src={favorit3} alt="favorit"/>
-                   </div>
-                   <div className="favorit__btn">
-                    <a href="#" className="header__btn">Shop men</a>
-                    <a href="#" className="header__btn">Shop women</a>
-                   </div>
-                </div>
-                <div className="favorit__item">
-                   <div className="favorit__foto">
-                      <img src={favorit3} alt="favorit"/>
-                   </div>
-                   <div className="favorit__btn">
-                    <a href="#" className="header__btn">Shop men</a>
-                    <a href="#" className="header__btn">Shop women</a>
-                   </div>
-                </div>
-               </div>
-             </div>
+
+              {state.view=="everyday"? <FavoritItem src={favorit1}/>: ''}
+              {state.view=="running"? <FavoritItem src={favorit2}/>: ''}
+              {state.view=="travel"?  <FavoritItem src={favorit3}/>: ''}
+
+
+
+
+
          </div>
          <div className="runner">
             <div className="runner__box">

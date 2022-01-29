@@ -1,4 +1,8 @@
 import React from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+
+import { Navigation, Pagination, Scrollbar, A11y,Autoplay,Manipulation } from 'swiper';
 
 import stories1 from "../../assets/img/stories1.jpg";
 import stories2 from "../../assets/img/stories2.jpg";
@@ -19,8 +23,78 @@ export default function NewsBuisnes(){
          </div>
          <div className="collections ">
             <h2 className="collections__title">Stories</h2>
+
+            <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={50}
+      slidesPerView={3}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+    >
+      <SwiperSlide>
+      <div className="collection__box">
+             <img src={ stories1} alt="stories" className="collection__foto"/>
+             <h3 className="collection__title">Planet-Friendly Activewear</h3>
+             <p className="collection__text">
+               The Natural Run Collection is made with sustainable materials that can stand up to your toughest workout.
+             </p>
+          </div>
+      </SwiperSlide>
+      <SwiperSlide>
+      <div className="collection__box">
+            <img src={ stories2 } alt="stories" className="collection__foto"/>
+            <h3 className="collection__title">adidas and Allbirds</h3>
+            <p className="collection__text">
+               Learn more about FUTURECRAFT.FOOTPRINT, our collaborative shoe coming soon.
+            </p>
+         </div>
+      </SwiperSlide>
+      <SwiperSlide>
+      <div className="collection__box">
+            <img src={ stories3} alt="stories" className="collection__foto"/>
+            <h3 className="collection__title">How much did your outfit cost the planet?</h3>
+            <p className="collection__text">
+               Now any brand can use our Carbon Footprint tools to label their emissions.
+            </p>
+         </div>
+      </SwiperSlide>
+      <SwiperSlide>
+      <div className="collection__box">
+             <img src={ stories1} alt="stories" className="collection__foto"/>
+             <h3 className="collection__title">Planet-Friendly Activewear</h3>
+             <p className="collection__text">
+               The Natural Run Collection is made with sustainable materials that can stand up to your toughest workout.
+             </p>
+          </div>
+      </SwiperSlide>
+      <SwiperSlide>
+      <div className="collection__box">
+            <img src={ stories2 } alt="stories" className="collection__foto"/>
+            <h3 className="collection__title">adidas and Allbirds</h3>
+            <p className="collection__text">
+               Learn more about FUTURECRAFT.FOOTPRINT, our collaborative shoe coming soon.
+            </p>
+         </div>
+      </SwiperSlide>
+      <SwiperSlide>
+      <div className="collection__box">
+            <img src={ stories3} alt="stories" className="collection__foto"/>
+            <h3 className="collection__title">How much did your outfit cost the planet?</h3>
+            <p className="collection__text">
+               Now any brand can use our Carbon Footprint tools to label their emissions.
+            </p>
+         </div>
+      </SwiperSlide>
+
+
+      
+    </Swiper>
             
-     <div className="swiper-button-prev"></div>
+     {/* <div className="swiper-button-prev"></div>
      <div className="swiper-button-next"></div>
            <div className="swiper">
    
@@ -82,7 +156,7 @@ export default function NewsBuisnes(){
      </div>
    
    </div>
-   </div>
+   </div> */}
    
          </div>
       </div>

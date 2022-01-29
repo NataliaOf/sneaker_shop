@@ -1,4 +1,8 @@
 import React from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+
+import { Navigation, Pagination, Scrollbar, A11y,Autoplay,Manipulation } from 'swiper';
 
 import new1  from "../../assets/img/new1.png";
 import new2  from "../../assets/img/new2.png";
@@ -23,22 +27,29 @@ export default function Arives(){
       <div className="collections">
          <h2 className="collections__title">New Arrivals</h2>
          
-  <div className="swiper-button-prev"></div>
-  <div className="swiper-button-next"></div>
-        <div className="swiper">
 
-  <div className="swiper-wrapper">
-  
-    <div className="swiper-slide">
-       <div className="collection__box">
+
+  <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={50}
+      slidesPerView={3}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+    >
+      <SwiperSlide>
+      <div className="collection__box">
           <img src={new1} alt="shop" className="collection__foto"/>
           <h3 className="collection__title">Men's Trail Runner SWT</h3>
           <p className="collection__text">
             classNameic Color, Natural Black
           </p>
        </div>
-    </div>
-    <div className="swiper-slide">
+      </SwiperSlide>
+      <SwiperSlide>
       <div className="collection__box">
          <img src={new2} alt="shop" className="collection__foto"/>
          <h3 className="collection__title">Women's Trail Runner SWT</h3>
@@ -46,8 +57,8 @@ export default function Arives(){
             classNameic Color, Natural White
          </p>
       </div>
-   </div>
-   <div className="swiper-slide">
+      </SwiperSlide>
+      <SwiperSlide>
       <div className="collection__box">
          <img src={new3} alt="shop" className="collection__foto"/>
          <h3 className="collection__title">Men's Trail Runner SWT</h3>
@@ -55,17 +66,17 @@ export default function Arives(){
             Limited Edition Color, Diablo
          </p>
       </div>
-   </div>
-   <div className="swiper-slide">
+      </SwiperSlide>
+      <SwiperSlide>
       <div className="collection__box">
-         <img src={new1} alt="shop" className="collection__foto"/>
-         <h3 className="collection__title">Men's Trail Runner SWT</h3>
-         <p className="collection__text">
+          <img src={new1} alt="shop" className="collection__foto"/>
+          <h3 className="collection__title">Men's Trail Runner SWT</h3>
+          <p className="collection__text">
             classNameic Color, Natural Black
-         </p>
-      </div>
-   </div>
-   <div className="swiper-slide">
+          </p>
+       </div>
+      </SwiperSlide>
+      <SwiperSlide>
       <div className="collection__box">
          <img src={new2} alt="shop" className="collection__foto"/>
          <h3 className="collection__title">Women's Trail Runner SWT</h3>
@@ -73,8 +84,8 @@ export default function Arives(){
             classNameic Color, Natural White
          </p>
       </div>
-   </div>
-   <div className="swiper-slide">
+      </SwiperSlide>
+      <SwiperSlide>
       <div className="collection__box">
          <img src={new3} alt="shop" className="collection__foto"/>
          <h3 className="collection__title">Men's Trail Runner SWT</h3>
@@ -82,11 +93,12 @@ export default function Arives(){
             Limited Edition Color, Diablo
          </p>
       </div>
-   </div>
-    ...
-  </div>
+      </SwiperSlide>
+      
+      
+    </Swiper>
 
-</div>
+
 
       </div>
    </div>

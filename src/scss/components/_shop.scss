@@ -31,8 +31,7 @@ margin: 30px 0;
 .hide{
    display: none;
 }
-.crumbs {
-}
+
 .wrap{
    display: flex;
    justify-content: space-between;
@@ -42,7 +41,8 @@ margin: 30px 0;
 }
 
 .acide{
-   width: max(20%,200px);
+   width: 200px;
+   // width: max(20%,200px);
    padding: 10px;
    @media (max-width:725px){
       width: 100%;
@@ -51,7 +51,8 @@ margin: 30px 0;
 }
 .catalog{
    position: relative;
-   width: max(80%, 500px);
+   width: 500px;
+   // width: max(80%, 500px);
    @media (max-width:725px){
       width: 100%;
    }

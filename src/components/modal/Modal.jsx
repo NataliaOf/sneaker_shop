@@ -9,14 +9,14 @@ export default function Modal ({children}) {
    const [loginForm, setLoginForm] = useState(true);
 
    function viewRegisterForm(){
-      console.log("false");
+   
       setLoginForm(false)
    }
    function viewLoginForm(){
       setLoginForm(true)
    }
 
-   return (
+   return ( 
 <>
          <div id="myModal" className="modal">
           <div className="modal-content">
@@ -26,7 +26,7 @@ export default function Modal ({children}) {
               <MyButton onClick={viewLoginForm}>register</MyButton>
             </div>
             <div className="modal-body">
-               {loginForm ?  <FormLogin/> :  <FormRegister/>}
+               {loginForm ?  <FormRegister/> :  <FormLogin/>}
             
             </div>
              </div>

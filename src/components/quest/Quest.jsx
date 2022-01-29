@@ -1,4 +1,6 @@
 import React from "react";
+import MyButton from "../UI/MyButton";
+import MyInput from "../UI/MyInput";
 
 export default function Quest(){
 
@@ -12,8 +14,9 @@ export default function Quest(){
          </p>
     
          <form action="" className="quest__form">
-            <input type="email" className="quest__input" placeholder="Enter Your Email Address"/>
-            <button className="quest__btn">Sign Up</button>
+            <MyInput id="quest__input" type="email" placeholder="Enter Your Email Address" text="Your Email" />
+         
+            <MyButton>Sign Up</MyButton>
             <p className="quest__massege">
              Note: You can opt-out at any time. See our Privacy Policy and Terms.
             </p>

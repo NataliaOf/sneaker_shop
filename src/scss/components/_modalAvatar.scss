@@ -15,8 +15,10 @@
    }
 }
 //#myModal #myModal2 #myModal3 модальные окна
-#myModal{
-   display: none;
+#myModal,
+#myModal2,
+#myModal3{
+   display: block;
 }
 
 /* Modal Content */
