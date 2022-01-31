@@ -32,8 +32,8 @@ export default function SliderShop(){
       navigation
       autoplay
       pagination={{ clickable: true }}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log('slide change')}
+      // onSwiper={(swiper) => console.log(swiper)}
     >
       <SwiperSlide>
       <div className="collection__box">

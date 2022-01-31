@@ -3,7 +3,7 @@ import React from "react";
 export default function Acide(){
 
    return(
-      <acide className="acide">
+      <aside className="acide">
       <h3 className="prise__title">price <span className="prise__cost">50</span></h3>
       <input className="prise__input"type="range" min="30" max="100" value="50"/>
       
@@ -62,6 +62,6 @@ export default function Acide(){
       <input className="for__input"  type="checkbox" id="travel"/></label>
     </div>
       <button className="apply__btn">to apply</button>
-   </acide>
+   </aside>
    )
 }

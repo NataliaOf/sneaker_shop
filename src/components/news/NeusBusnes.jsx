@@ -19,7 +19,6 @@ export default function NewsBuisnes(){
          </p>
          <div className="busines__box">
             <a href="#" className="arrives__btn">Our Sustainable Practices</a>
-            
          </div>
          <div className="collections ">
             <h2 className="collections__title">Stories</h2>
@@ -32,8 +31,8 @@ export default function NewsBuisnes(){
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
+      // onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log('slide change')}
     >
       <SwiperSlide>
       <div className="collection__box">

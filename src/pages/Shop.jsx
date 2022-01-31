@@ -3,7 +3,16 @@ import foto from '../assets/img/favorit1.jpg'
 import Acide from "../components/Acide";
 import MiniHeader from "../components/header/MiniHeader";
 
+import Card from "../components/cards/Card";
+import CardProduct from "../components/cards/CardProduct";
+import { useSelector } from 'react-redux';
+import { Link } from "react-router-dom";
+
 export default function Shop(){
+   const state = useSelector(state => state.product);
+   // console.log(state.product);
+   const producs = state.product;
+
 
    return(
          <>
@@ -13,20 +22,18 @@ export default function Shop(){
 
        
     
-           <div class="search">
-        <div class="crumbs">
-           <a href="index.html" class="crumb">home/</a>
-           <a href="shop.html" class="crumb active ">shop/</a>
-           {/* <a href="catalog-men.html" class="crumb" > men/</a> */}
-           {/* <a href="catalog-women.html" class="crumb" > women/ </a> */}
-           {/* <a href="catalog-new.html" class="crumb" >new/ </a> */}
+           <div className="search">
+        <div className="crumbs">
+           <Link to={"/"} className="crumb">Home/</Link>
+           <Link to={"/shop"} className="crumb active ">shop/</Link>
+         
 
         </div>
-        <div class="search__in">
-           <input type="search" class="search__input" placeholder="search"/>
-           <div class="search__list">
+        <div className="search__in">
+           <input type="search" className="search__input" placeholder="search"/>
+           <div className="search__list">
             <ul>
-             <li class="search__item"></li> 
+             <li className="search__item"></li> 
             </ul>
          </div>
         </div>
@@ -34,36 +41,18 @@ export default function Shop(){
         
      </div>
 
-     <div class="wrap">
+     <div className="wrap">
         <Acide/>
-     {/* acide */}
 
-     <section class="catalog">
-     <div class="card-product">
-     <div class="card-product__box">
-      <div class="card-product__slider">
-         <img src={ foto} alt="foto"/>
-      </div>
-      <div class="card-product__info">
-         <h2  class="card-product__title">Name <span  class="card-product__close">&#10060;</span></h2>
-         <div class="card-product__articl">Article: <span>44444</span></div>
-         <div class="card-product__price">60 $</div>
-         <p class="card__appoint">for the city</p>
-         <div class="card__stock">In stock</div>
-         {/* <p class="card-product__description">
-            Lorem ipsum dolor sit
-         </p> */}
 
-<div class="card__btns">
-      <button class="card__buy" data-id="0001">купить</button>
-      <a class="card__look">посмотреть</a>
-   </div>
+     <section className="catalog">
 
-        
-      </div>
-   </div>
-
+    
+     <div className="cards">
+     { producs.map(product => <Card  key={product.id} id={product.id} src={product.img} name={product.name} cost={ product.cost} appointment={product.appointment} availability={product.availability}/>)}
      </div>
+    
+    <CardProduct/>
      </section>
 
 

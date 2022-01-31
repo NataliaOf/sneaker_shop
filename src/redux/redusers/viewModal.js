@@ -1,7 +1,8 @@
 const initialStaet = {
    modalAvatar: false,
    modalBasket: false,
-   modalQuestion: false
+   modalQuestion: false,
+   modalBurger: false
 }
 
  function viewModalReduser(state = initialStaet, action) {
@@ -13,7 +14,9 @@ const initialStaet = {
          return {...state,  modalBasket: action.payload}
 
          case 'ADD-MODAL-QUESTION':
-            return {...state,  modalQuestion: action.payload}
+            return {...state,  modalQuestion: action.payload};
+            case 'TOGGLE-BURGER':
+               return {...state, modalBurger: action.payload};
      default:
        return state;
    }

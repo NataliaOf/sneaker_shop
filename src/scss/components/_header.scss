@@ -57,6 +57,9 @@ background: $colorLight;
          }
        
       }
+      &__button{
+margin: 0  5px;
+      }
 }
 .order__index{
    display: none;
@@ -90,6 +93,10 @@ background: $colorLight;
       margin-left: -2000px;
       &.active{
          margin-left: -20px;
+         background-color:  $colorLight;
+         width: 110vw;
+         margin-left: -30px;
+         padding: 70px 10px 0 10px;
       }
       
    }
@@ -242,7 +249,6 @@ background: $colorLight;
    background-color: $colorDark;
    position: relative;
    top: 10px;
-   
    &::before{
       content: "";
       display: block;
@@ -251,6 +257,7 @@ background: $colorLight;
    background-color: $colorDark;
    position: absolute;
    top: -7px;
+   transition: all 0.6s;
    }
    &::after{
       content: "";
@@ -260,11 +267,25 @@ background: $colorLight;
    background-color: $colorDark;
    position: absolute;
    top: 7px;
+  transition: all 0.6s;
    }
    @media (max-width: 1025px){
       display: block;
    }
    &__btn{
       cursor: pointer;
+      margin: 0  5px;
    }
+
+ &.active{
+   height: 0;
+   &::after{
+      transform: rotate(50deg);
+      top: 0px
+   }
+   &::before{
+      transform: rotate(-50deg);
+      top: 0px
+   }
+ }
 }

@@ -36,9 +36,9 @@ export default function Favorite () {
          <h2 className="favorits__title">Our Favorites</h2>
          <div className="favorits__tab">
             <div className="tab">
-               <button onClick={viewEveryday} className="tablinks" onclick="openCity(event, 'Everyday')">Everyday</button>
-               <button onClick={viewRunning} className="tablinks" onclick="openCity(event, 'Running')">Running</button>
-               <button onClick={viewTravel} className="tablinks" onclick="openCity(event, 'Travel')">Travel</button>
+               <button onClick={viewEveryday} className="tablinks" >Everyday</button>
+               <button onClick={viewRunning} className="tablinks" >Running</button>
+               <button onClick={viewTravel} className="tablinks" >Travel</button>
           </div>
              <hr/>
 
