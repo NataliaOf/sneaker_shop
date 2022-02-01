@@ -7,6 +7,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import { BsQuestionCircle } from "react-icons/bs";
 import { useDispatch, useSelector } from 'react-redux';
 import { setAvatarModal, setBascketModal, setQuestModal, toggleBurgerModal  } from "../../redux/actions/modal";
+import { setActive, setFilter } from "../../redux/actions/product";
 
 export default function Nav(){
 
@@ -14,8 +15,9 @@ export default function Nav(){
  
 
    const state = useSelector(state => state.viewModal);
-   const meyuLinck = ['Men',' Women',' New Arrivals', 'Sustainability', 'Stores' ]
-// console.log( state);
+   const state1 = useSelector(state => state.product);
+   const meyuLinck = ['Men',' Women',' New Arrivals' ]  // 'Sustainability', 'Stores'
+
 
    function viewAvatar(){
       dispatch(setAvatarModal(state.modalAvatar= !state.modalAvatar))
@@ -30,15 +32,17 @@ export default function Nav(){
       dispatch(toggleBurgerModal( state.modalBurger =!state.modalBurger))
   
    }
-   const [addActive, setAddActive] = useState(null);
+   
 
    function addClassActiveAll(){
-      setAddActive(null);
-     
+   
+      dispatch( setActive(state1.active = null))
+      dispatch(setFilter(state1.filter =false));
    }
-  
+     
     function addClassActive(i){
-      setAddActive(i);
+      dispatch( setActive(state1.active = i))
+      dispatch(setFilter(state1.filter =false));
     }
   
    
@@ -51,13 +55,13 @@ export default function Nav(){
 
       <ul className= {state.modalBurger? "menu active" : "menu"} >
       <li className="menu__list">
-      <Link to="/shop"   className={(addActive=== null) ?  "menu__link active" :  "menu__link"} onClick={addClassActiveAll}>  
+      <Link to="/shop"   className={(state1.active=== null) ?  "menu__link active" :  "menu__link"} onClick={addClassActiveAll}>  
            ALL
       </Link>
       </li>
        { meyuLinck.map((item, i) => (
           <li className="menu__list "  key={item}>
-           <Link to="/shop"  className={(addActive=== i) ?  "menu__link active" :  "menu__link"}  onClick={()=>addClassActive(i)}>
+           <Link to="/shop"  className={(state1.active === i) ?  "menu__link active" :  "menu__link"}  onClick={()=>addClassActive(i)}>
              {item}
            </Link>
            </li>

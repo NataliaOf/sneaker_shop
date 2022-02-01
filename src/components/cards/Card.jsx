@@ -1,7 +1,19 @@
 import React from "react";
+import { useDispatch, useSelector} from "react-redux";
+import { setCardProduct, viewCardProduct } from "../../redux/actions/product";
 
 export default function Card({id, src, name, cost, appointment,availability}){
+   const dispatch = useDispatch();
+   const state = useSelector(state => state.product);
+   // console.log(state.product)
+   function viewCardProducts(id){
+      const CardProduct = state.product.filter(card=>{
+         return card.id.includes(id)
+      })
+      dispatch(setCardProduct(CardProduct[0]))
+      dispatch(viewCardProduct(true))
 
+   }
  
    return(
       <div className="card">
@@ -16,7 +28,7 @@ export default function Card({id, src, name, cost, appointment,availability}){
       </div>
       <div className="card__btns">
          <button className="card__buy" >купить</button>
-         <a className="card__look">посмотреть</a>
+         <a className="card__look" onClick={()=> viewCardProducts(id)}>посмотреть</a>
       </div>
    </div>
    )
