@@ -16,6 +16,7 @@ export default function Nav(){
 
    const state = useSelector(state => state.viewModal);
    const state1 = useSelector(state => state.product);
+   console.log(state1.addProduct.length)
    const meyuLinck = ['Men',' Women',' New Arrivals' ]  // 'Sustainability', 'Stores'
 
 
@@ -87,7 +88,7 @@ export default function Nav(){
         <FiShoppingCart className="nav__button" onClick={viewBasket}/> 
     
         
-          <span className="order__index"></span>
+         {state1.addProduct.length !== 0 && <span className="order__index">{state1.addProduct.length}</span>} 
           <div className="burger__btn" onClick={toggleBurger}>
            <span  className= {state.modalBurger? "burger active" : "burger"}></span>
           </div>

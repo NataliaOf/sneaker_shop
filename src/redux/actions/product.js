@@ -28,3 +28,12 @@ export const viewCardProduct = (card) =>({
    payload: card
 })
 
+export const addProductBascet = (product) =>({
+   type: 'ADD-PRODUCT-BASKET',
+   payload: product
+})
+export const removeProductBasket = (product) => ({
+   type: 'REMOVE-PRODUCT-BASKET',
+   payload: product
+})
+

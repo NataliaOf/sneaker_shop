@@ -84,7 +84,7 @@ const addProduct=(art)=>{
      </div>
 
      <div className="wrap">
-        <Acide/>
+        {/* <Acide/> */}
 
 
      <section className="catalog">
@@ -93,11 +93,11 @@ const addProduct=(art)=>{
      <div className="cards">
 
              {state.filter
-               ? state.card.map(product => <Card  key={product.id} id={product.id} src={product.img} name={product.name} cost={ product.cost} appointment={product.appointment} availability={product.availability}/>)
-               :cards.map(product => <Card  key={product.id} id={product.id} src={product.img} name={product.name} cost={ product.cost} appointment={product.appointment} availability={product.availability}/>)
+               ? state.card.map(product => <Card  key={product.id} {...product}/>)
+               :cards.map(product => <Card  key={product.id} {...product} />)
              }
       
-    
+      {/* id={product.id} src={product.img} name={product.name} cost={ product.cost} appointment={product.appointment} availability={product.availability} */}
      </div>
 
      {state.viewCadProduct && <CardProduct /> }

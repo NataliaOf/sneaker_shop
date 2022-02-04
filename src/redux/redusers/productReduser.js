@@ -4,7 +4,8 @@ const initialStaet = {
    filter: false,
    card: [],
    cardProduct: {},
-   viewCadProduct: false
+   viewCadProduct: false,
+   addProduct: [],
   
 };
 
@@ -27,6 +28,12 @@ function productReduser(state= initialStaet, action){
 
            case 'VIEW-CARDPRODUCT':
             return{ ...state,   viewCadProduct : action.payload };
+
+        case 'ADD-PRODUCT-BASKET' :
+           return {...state, ...state.addProduct.push(action.payload)  };
+         
+        case 'REMOVE-PRODUCT-BASKET':
+           return{...state, addProduct: action.payload }   
       default:
          return state;
    }

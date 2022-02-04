@@ -1,36 +1,36 @@
-.modal {
-   display: none; /* Hidden by default */
-   position: fixed; /* Stay in place */
-   z-index: 1; /* Sit on top */
-   padding-top: 100px; /* Location of the box */
-   left: 0;
-   top: 0;
-   width: 100%; /* Full width */
-   height: 100%; /* Full height */
-   overflow: auto; /* Enable scroll if needed */
-   background-color: rgb(0,0,0); /* Fallback color */
-   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+// .modal {
+//    display: none; /* Hidden by default */
+//    position: fixed; /* Stay in place */
+//    z-index: 1; /* Sit on top */
+//    padding-top: 100px; /* Location of the box */
+//    left: 0;
+//    top: 0;
+//    width: 100%; /* Full width */
+//    height: 100%; /* Full height */
+//    overflow: auto; /* Enable scroll if needed */
+//    background-color: rgb(0,0,0); /* Fallback color */
+//    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+// }
 
-/* Modal Content */
-.modal-content {
-   position: relative;
-   background-color:$colorLight;
-   margin: auto;
-   padding: 20px;
-   border: 2px solid $colorDark;
-   width: 50%;
-   top: 50%;
-   transform: translateY(-50%);
-   // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-   -webkit-animation-name: animatetop;
-   -webkit-animation-duration: 0.4s;
-   animation-name: animatetop;
-   animation-duration: 0.4s;
-   @media (max-width:670px) {
-      width: 95%;
-   }
-}
+// /* Modal Content */
+// .modal-content {
+//    position: relative;
+//    background-color:$colorLight;
+//    margin: auto;
+//    padding: 20px;
+//    border: 2px solid $colorDark;
+//    width: 50%;
+//    top: 50%;
+//    transform: translateY(-50%);
+//    // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+//    -webkit-animation-name: animatetop;
+//    -webkit-animation-duration: 0.4s;
+//    animation-name: animatetop;
+//    animation-duration: 0.4s;
+//    @media (max-width:670px) {
+//       width: 95%;
+//    }
+// }
 
 /* Add Animation */
 // @-webkit-keyframes animatetop {
@@ -94,12 +94,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 0px;
      
    }
 
    &__name {
-      @include input;
+      // @include input;
       flex-basis: auto;
       width: 60%;
       padding: 10px;
@@ -119,7 +118,9 @@ font-size: 14px;
       width: 60px;
       height: 60px;
       padding: 10px;
-      font-size: 20px;
+      line-height: 40px;
+      font-size: 30px;
+      text-align: center;
       appearance: textfield;
       &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button{
@@ -129,7 +130,8 @@ font-size: 14px;
    }
 
    &__remove {
-    color:red;
+   //  color:red;
+    font-size: 20px;
     padding: 10px;
     cursor: pointer;
    }
@@ -139,7 +141,8 @@ font-size: 14px;
    align-items: center;
 }
    &__sum{
-      @include input;
+      // @include input;
+      font-size: 25px;
       // flex-basis: auto;
       // width: 60%;
       // padding: 10px;
@@ -161,3 +164,11 @@ font-size: 14px;
       cursor: pointer;
    }
 }
+
+.cost{
+   display: inline-block;
+   flex: 0 0 100px;
+   /* width: 100px; */
+    font-size: 25px;
+    margin: 0 10px;
+ }
