@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/sneaker_shop/static/css/main.3b513b09.css",
+    "main.js": "/sneaker_shop/static/js/main.76fdc3bd.js",
+    "static/media/header.jpg": "/sneaker_shop/static/media/header.633db1d97f694be09a29.jpg",
+    "static/media/bg3.jpg": "/sneaker_shop/static/media/bg3.1885e916ea97b929655a.jpg",
+    "static/media/bg2.jpg": "/sneaker_shop/static/media/bg2.a263dcbb9ecde5470a59.jpg",
+    "static/media/stories3.jpg": "/sneaker_shop/static/media/stories3.fddbca9f8610a772f09c.jpg",
+    "static/media/bg1.jpg": "/sneaker_shop/static/media/bg1.21b70f600a64151e3ba5.jpg",
+    "static/media/favorit1.jpg": "/sneaker_shop/static/media/favorit1.e6816f58b718d6ca9169.jpg",
+    "static/media/shop2.jpg": "/sneaker_shop/static/media/shop2.4af05d8085a9541f7ef9.jpg",
+    "static/media/shop1.jpg": "/sneaker_shop/static/media/shop1.699bd9bde2eb5d97125a.jpg",
+    "static/media/favorit2.jpg": "/sneaker_shop/static/media/favorit2.14881bcdec12705ca250.jpg",
+    "static/media/stories1.jpg": "/sneaker_shop/static/media/stories1.bb69880b006c4f29be76.jpg",
+    "static/media/favorit3.jpg": "/sneaker_shop/static/media/favorit3.752b980aedc614db8bbf.jpg",
+    "static/media/stories2.jpg": "/sneaker_shop/static/media/stories2.bb70753d1b7fff8d8ca0.jpg",
+    "static/media/new3.png": "/sneaker_shop/static/media/new3.e96fa8e2c7cc3e39b169.png",
+    "static/media/shop3.jpg": "/sneaker_shop/static/media/shop3.14f8b25e615572748b7e.jpg",
+    "static/media/new2.png": "/sneaker_shop/static/media/new2.94205d1e2b4de6a2d1fa.png",
+    "static/media/new1.png": "/sneaker_shop/static/media/new1.91c7bec94052f224d20a.png",
+    "static/media/logo.svg": "/sneaker_shop/static/media/logo.aacee43e97ff9eba6831699b56d53521.svg",
+    "index.html": "/sneaker_shop/index.html",
+    "main.3b513b09.css.map": "/sneaker_shop/static/css/main.3b513b09.css.map",
+    "main.76fdc3bd.js.map": "/sneaker_shop/static/js/main.76fdc3bd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b513b09.css",
+    "static/js/main.76fdc3bd.js"
+  ]
+}
